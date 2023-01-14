@@ -160,8 +160,3 @@ vim.diagnostic.config({
     source = "always", -- Or "if_many"
   },
 })
-
-local tsstatus, tssetup = pcall(require, "typescript")
-if not tsstatus then
-  return
-end

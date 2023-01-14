@@ -84,11 +84,10 @@ _G.packer_plugins = {
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
+  ["bufferline.nvim"] = {
     loaded = true,
-    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim",
-    wants = { "nvim-web-devicons" }
+    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   catppuccin = {
     loaded = true,
@@ -124,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["goto-preview"] = {
-    loaded = true,
-    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/goto-preview",
-    url = "https://github.com/rmagatti/goto-preview"
   },
   ["lazygit.nvim"] = {
     loaded = true,
@@ -215,6 +209,11 @@ _G.packer_plugins = {
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
     url = "https://github.com/p00f/nvim-ts-rainbow"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -230,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -239,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/dongilkim/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,

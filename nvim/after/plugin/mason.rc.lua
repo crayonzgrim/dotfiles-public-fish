@@ -21,3 +21,9 @@ mason.setup({
 mason_lspconfig.setup({
   automatic_installation = true, -- not the same as ensure_installed
 })
+
+mason_lspconfig.setup_handlers({
+  tsserver = function()
+    require('typescript').setup({})
+  end
+})

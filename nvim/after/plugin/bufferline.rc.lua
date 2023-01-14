@@ -6,8 +6,8 @@ bufferline.setup({
     mode = "tabs",
     separator_style = 'slant',
     always_show_bufferline = true,
-    show_buffer_close_icons = true,
-    show_close_icon = true,
+    show_buffer_close_icons = false,
+    show_close_icon = false,
     color_icons = true,
 
     left_trunc_marker = "",
@@ -15,8 +15,8 @@ bufferline.setup({
     max_name_length = 30,
     max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
     tab_size = 21,
-    diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
-    diagnostics_update_in_insert = true,
+    diagnostics = false, -- | "nvim_lsp" | "coc",
+    diagnostics_update_in_insert = false,
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
   },
   highlights = {

@@ -1,5 +1,6 @@
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
+
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
@@ -11,11 +12,23 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
+    path_display = { 'smart' },
     mappings = {
       n = {
         ["q"] = actions.close
       },
+      i = {
+        ["<C-u>"] = actions.preview_scrolling_up,
+        ["<C-d>"] = actions.preview_scrolling_down,
+        ["<esc>"] = actions.close
+      }
     },
+  },
+  layout_config = {
+    horizontal = {
+      preview_cutoff = 100,
+      preview_width = 0.6
+    }
   },
   extensions = {
     file_browser = {
@@ -55,15 +68,16 @@ end)
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()
 end)
-vim.keymap.set('n', ';t', function()
+vim.keymap.set('n', ';h', function()
   builtin.help_tags()
 end)
 vim.keymap.set('n', ';;', function()
   builtin.resume()
 end)
---[[ vim.keymap.set('n', ';e', function()
+vim.keymap.set('n', ';e', function()
   builtin.diagnostics()
-end) ]]
+end)
+
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",

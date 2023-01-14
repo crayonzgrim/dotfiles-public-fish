@@ -11,13 +11,13 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
+  sort_by = "case_sensitive",
   hijack_directories = {
     enable = true,
     auto_open = true,
   },
   disable_netrw = false,
   hijack_netrw = true,
-  -- open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
@@ -36,7 +36,7 @@ nvim_tree.setup({
   -- },
   renderer = {
     add_trailing = false,
-    group_empty = false,
+    group_empty = true,
     highlight_git = false,
     highlight_opened_files = "1",
     root_folder_modifier = ":t",
@@ -86,16 +86,18 @@ nvim_tree.setup({
   },
   diagnostics = {
     enable = true,
+    show_on_dirs = false,
+    debounce_delay = 50,
     icons = {
       hint = "💡",
       info = "ℹ️",
       warning = "⚠️",
-      error = "🐞",
+      error = "❌", -- 🐞
     },
   },
   update_focused_file = {
     enable = true,
-    update_cwd = false,
+    update_cwd = true,
   },
   -- system_open = {
   --   cmd = nil,
@@ -106,6 +108,12 @@ nvim_tree.setup({
     -- ignore = false,
     timeout = 500,
   },
+  log = {
+    enable = true,
+    types = {
+      diagnostics = true
+    }
+  },
   actions = {
     open_file = {
       resize_window = true,
@@ -113,15 +121,16 @@ nvim_tree.setup({
   },
   view = {
     side = "left",
+    adaptive_size = true,
     width = 40,
     hide_root_folder = true,
-    -- auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
         { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
         { key = "v", cb = tree_cb("vsplit") },
         { key = "s", cb = tree_cb("split") },
+        { key = "u", action = "dir_up" }
       },
     },
     number = false,

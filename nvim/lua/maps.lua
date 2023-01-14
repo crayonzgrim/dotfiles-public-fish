@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 
--- keymap.set('n', 'x', '"_x')
+keymap.set('n', 'x', '"_x')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -22,7 +22,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "ss", ":split<Return><C-w>w")
 keymap.set("n", "sv", ":vsplit<Return><C-w>w")
 keymap.set("n", "se", "<C-w>=")
-keymap.set("n", "sx", ":close<CR>")
+keymap.set("n", "<leader>x", ":close<CR>")
 
 -- Move window
 keymap.set("n", "<Space>", "<C-w>w")

@@ -1,11 +1,27 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
+
 local lspkind = require 'lspkind'
 
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if (not luasnip_status) then return end
 
 require("luasnip.loaders.from_vscode").lazy_load()
+
+luasnip.add_snippets('typescriptreact', {
+  luasnip.snippet('log', {
+    luasnip.text_node('console.log('),
+    luasnip.text_node(')')
+  })
+})
+
+luasnip.add_snippets('javascriptreact', {
+  luasnip.snippet('log', {
+    luasnip.text_node('console.log('),
+    luasnip.text_node(')')
+  })
+})
+
 
 cmp.setup({
   snippet = {
@@ -25,9 +41,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' }, -- lsp
-    { name = 'luasnip' }, -- snippets
     { name = 'buffer' }, -- text within current buffer
-    { name = 'path' }, -- file system path
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50, ellipsis_char = "..." })

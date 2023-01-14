@@ -13,7 +13,8 @@ packer.startup(function(use)
   use({ "catppuccin/nvim", as = "catppuccin" })
   -- use { 'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' } }
 
-  -- use("christoomey/vim-tmux-navigator") -- Tmux & split window navigation
+  -- Tmux & split window navigation
+  -- use("christoomey/vim-tmux-navigator")
 
   use("szw/vim-maximizer") -- Maximizes and restores current window
 
@@ -29,7 +30,6 @@ packer.startup(function(use)
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/vim-vsnip")
   use("hrsh7th/vim-vsnip-integ")
-  -- use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
   use("jose-elias-alvarez/typescript.nvim")
 
@@ -62,8 +62,6 @@ packer.startup(function(use)
 
   -- prettier & lint
   use("jose-elias-alvarez/null-ls.nvim")
-  -- use("MunifTanjim/prettier.nvim")
-  -- use("MunifTanjim/eslint.nvim")
 
   -- GitSigns
   use("lewis6991/gitsigns.nvim")
@@ -73,8 +71,6 @@ packer.startup(function(use)
   -- mason
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
-
-  use("rmagatti/goto-preview") -- preview
 
   use("sindrets/diffview.nvim") -- diff view
 
@@ -88,4 +84,9 @@ packer.startup(function(use)
   use("mbbill/undotree") -- Undo tree
 
   use({ "akinsho/toggleterm.nvim", tag = "*" }) -- single toggle term
+
+  use 'folke/todo-comments.nvim'
+
+  -- fold lines
+  use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 end)
