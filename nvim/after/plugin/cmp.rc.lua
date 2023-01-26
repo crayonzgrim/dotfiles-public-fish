@@ -8,19 +8,19 @@ if (not luasnip_status) then return end
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
-luasnip.add_snippets('typescriptreact', {
-  luasnip.snippet('log', {
-    luasnip.text_node('console.log('),
-    luasnip.text_node(')')
-  })
-})
-
-luasnip.add_snippets('javascriptreact', {
-  luasnip.snippet('log', {
-    luasnip.text_node('console.log('),
-    luasnip.text_node(')')
-  })
-})
+-- luasnip.add_snippets('typescriptreact', {
+--   luasnip.snippet('log', {
+--     luasnip.text_node('console.log('),
+--     luasnip.text_node(')')
+--   })
+-- })
+--
+-- luasnip.add_snippets('javascriptreact', {
+--   luasnip.snippet('log', {
+--     luasnip.text_node('console.log('),
+--     luasnip.text_node(')')
+--   })
+-- })
 
 
 cmp.setup({
@@ -40,11 +40,19 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
+    { name = 'path' },
     { name = 'nvim_lsp' }, -- lsp
     { name = 'buffer' }, -- text within current buffer
+    { name = 'luasnip' },
+    { name = 'nvim_lsp_signature_help' },
   }),
   formatting = {
-    format = lspkind.cmp_format({ with_text = false, maxwidth = 50, ellipsis_char = "..." })
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      with_text = false,
+      maxwidth = 50,
+      ellipsis_char = "..."
+    })
   }
 })
 

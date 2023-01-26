@@ -27,6 +27,7 @@ packer.startup(function(use)
 
   use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
   use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/vim-vsnip")
   use("hrsh7th/vim-vsnip-integ")
@@ -55,7 +56,6 @@ packer.startup(function(use)
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-file-browser.nvim")
 
-  -- use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" }) -- tab
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' } -- tab
 
   use("norcalli/nvim-colorizer.lua")
@@ -89,4 +89,11 @@ packer.startup(function(use)
 
   -- fold lines
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+  -- emmet vim for html -> If you want live-server, you can use live-server .
+  use 'mattn/emmet-vim'
+
+  -- react snippet
+  -- use 'SirVer/ultisnips'
+  -- use 'mlaursen/vim-react-snippets'
 end)
