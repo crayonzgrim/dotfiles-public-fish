@@ -10,6 +10,10 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
+-- Recommanded settings from nvim-tree documentation
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 nvim_tree.setup({
   sort_by = "case_sensitive",
   hijack_directories = {

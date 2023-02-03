@@ -10,15 +10,16 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
+command -qv nvim && alias vim nvim
+
 alias ls "ls -p -G"
 alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
+alias ll "exa -l -g -icons"
+alias lla "exa -ll -a"
 
 alias g git
 alias lg lazygit
 alias glog "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
-command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
 
