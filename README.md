@@ -1,6 +1,5 @@
-![nvim screenshot](./neovim-image.png)
-
 # DONG_IL's dotfiles
+![nvim screenshot](./neovim-image.png)
 
 ## Contents
 
